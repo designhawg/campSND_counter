@@ -1,0 +1,49 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<h1>0</h1>
+		<h2>Awesomeness</h2>
+		<div class="center">
+			<button id="decrease">-</button>
+			<button id="increase">+</button>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+		</script>
+		<script>
+		var awesomeness = 0;
+
+		$('button').click(function(){
+			if($(this).attr('id')==='increase'){
+				awesomeness = awesomeness + 1;
+			} else {
+				awesomeness = awesomeness - 1;
+			}
+			$('h1').text(awesomeness);
+		});
+
+		</script>
+
+
+		<script>
+		var picIndex = 0;
+
+		$('button').click(function(){
+			if($(this).attr('id')==='increase'){
+				picIndex = picIndex + 1;
+			} else {
+				picIndex = picIndex - 1;
+			}
+			$('img').attr("photo" + picIndex + ".jpg");
+		});
+
+		// photo1.jpg
+		// photo2.jpg
+		// photo3.jpg
+
+		</script>
+
+	</body>
+</html>
